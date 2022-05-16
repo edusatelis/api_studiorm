@@ -5,7 +5,7 @@ const UserRouter: express.Router = express.Router();
 
 UserRouter.post('category', UserService.createCategory);
 UserRouter.get('category', UserService.findAllCategory);
-UserRouter.put('category',UserService.updateCategory);
+UserRouter.put('category/:id',UserService.updateCategory);
 UserRouter.delete('category/:id',UserService.deleteCategory);
 
 //Service
@@ -17,8 +17,8 @@ UserRouter.get('service/:id',UserService.findService);
 
 //CashRegister
 UserRouter.post('cashRegister',UserService.createCash);
-UserRouter.put('cashRegister/:id',UserService.openCash);
-UserRouter.put('cashRegister/:id',UserService.closeCash);
+UserRouter.put('cashRegister/open/:id',UserService.openCash);
+UserRouter.put('cashRegister/closed/:id',UserService.closeCash);
 UserRouter.get('cashRegister/:id',UserService.findCash);
 
 export default UserRouter; 
