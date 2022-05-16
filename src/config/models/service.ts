@@ -10,7 +10,7 @@ import { StatusEnum } from './enums/statusEnum';
 export interface IService extends Document {
     name: String,
     desc: String,
-    status: StatusEnum,
+    status: String,
     price: Number,
     category: String   
 }
@@ -19,7 +19,7 @@ const ServiceModel:Schema = new Schema({
     name: {type: String, required: true},
     desc: {type: String, required: true},
     date: {type: Date, default: Date.now().toLocaleString('pt-br')},
-    status: {enum: StatusEnum, required: true, default: StatusEnum.pending},
+    status: {type: String, required: true, default: StatusEnum.pending},
     price: {type: Number, required: true},
     category: {type: String, required: true}
 });

@@ -1,4 +1,4 @@
 export enum CashEnum {
-    open = 'Aberto',
-    closed = 'Fechado'
+    open = 'aberto',
+    closed = 'fechado'
 }
